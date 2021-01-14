@@ -1,13 +1,10 @@
 import re
-from Node import *
 from Circuit import *
-from Gate import *
 
 class Parser(object):
     """
     Parser for parsing bench files into an internal data structure
     """
-
     # regular expression to match lines
     INPUT_PATTERN = re.compile("INPUT\((.*)\)")
     OUTPUT_PATTERN = re.compile("OUTPUT\((.*)\)")
@@ -35,7 +32,7 @@ class Parser(object):
         # connect output nodes to gates
         for nodeName in self.circuit.getOutNodeNames():
             self.circuit.connectOutput(nodeName)
-        self.circuit.print()
+        # self.circuit.print()
 
     def parseGate(self, line):
         (gateName, gateType, signalNames) = self.getGate(line)

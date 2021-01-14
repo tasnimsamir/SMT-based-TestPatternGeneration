@@ -1,5 +1,3 @@
-from Node import *
-from Edge import Edge
 from Gate import *
 
 

@@ -1,5 +1,3 @@
-from z3 import *
-from Circuit import *
 from ATPGCircuit import *
 from GateConstraintVisitor import *
 """
@@ -10,10 +8,7 @@ using the SMT solver z3
 class ATPG(object):
     def __init__(self, circuit: Circuit):
         self.s = Solver()
-        self.vars = {} # Map with all variables of SMT solves 
-
-        #faulty = copy.deepcopy(circuit)
-        #faulty.addFault(fault, signalName, inputIndex=inputIndex, useOutNode=useOutNode)
+        self.vars = {} # Map with all variables of SMT solves
         self.circuit = ATPGCircuit(copy.deepcopy(circuit), copy.deepcopy(circuit))
         self.declareVars()
         self.setInputConstraints()
@@ -68,12 +63,16 @@ class ATPG(object):
         self.s.check()   
             
     def print(self, printAllSignals = False):
+        pattern = {}
         if self.s.check() == sat:
-            print("input vars:")
+            # print("input vars:") #input vars
             m = self.s.model()
             for inNodeName in self.circuit.getInNodeNames():
                 var = self.vars[inNodeName]
-                print('{0!s:<5s}: {1!s:<5s}'.format(inNodeName, m[var]))
+                pattern[inNodeName] = 1 if m[var] == True else 0
+                # print('{0!s:<5s}: {1!s:<5s}'.format(inNodeName, m[var]))
+            print("Input Gates : {}" . format(pattern))
+            print("Differential Test Pattern: {}" .format(list(pattern.values())))
 
             if printAllSignals:
                 print("gate values: original | faulty")

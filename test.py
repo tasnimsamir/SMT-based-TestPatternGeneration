@@ -45,8 +45,8 @@ def c6288_test():
     print('test c6288')
     test('c6288.bench', Circuit.STUCK_AT_0_FAULT, 'G1371gat')
 
-# simple_test()
-c17_test1()
+simple_test()
+#c17_test1()
 
 # c17_test2()
 # c432_test()

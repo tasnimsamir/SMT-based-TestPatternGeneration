@@ -14,7 +14,7 @@ def test(fileName, fault, signalName, inputIndex = None, useOutNode = None):
     atpg = ATPG(c)
     atpg.addFault(fault, signalName, inputIndex, useOutNode)
     atpg.solve()
-    atpg.print(printAllSignals=True)
+    atpg.print()
 
 def simple_test():
     print('simple test with 3 gates')

@@ -1,0 +1,54 @@
+START with c17.bench
+Inputs: G1gat G2gat G3gat G6gat G7gat
+START with stuck at 0 fault
+G1gat: 10110
+G2gat: 01010
+G3gat: 10110
+G6gat: 11111
+G7gat: 10101
+G10gat: 00110
+G10gat[0]: 10110
+G10gat[1]: 10110
+G11gat: 11101
+G11gat[0]: 11111
+G11gat[1]: 11111
+G16gat: 11111
+G16gat[0]: 11000
+G16gat[1]: 11000
+G19gat: 00000
+G19gat[0]: 00001
+G19gat[1]: 00001
+G22gat: 01001
+G22gat[0]: 00111
+G22gat[1]: 00111
+G23gat: 00001
+G23gat[0]: 00000
+G23gat[1]: 00000
+FINISHED with stuck at 0 fault
+START with stuck at 1 fault
+G1gat: 00110
+G2gat: 10100
+G3gat: 11010
+G6gat: 11100
+G7gat: 00000
+G10gat: 10100
+G10gat[0]: 00100
+G10gat[1]: 10000
+G11gat: 01110
+G11gat[0]: 01010
+G11gat[1]: 01100
+G16gat: 01001
+G16gat[0]: 00001
+G16gat[1]: 01111
+G19gat: 00001
+G19gat[0]: 00111
+G19gat[1]: 00100
+G22gat: 00000
+G22gat[0]: 10110
+G22gat[1]: 01001
+G23gat: 00000
+G23gat[0]: 01000
+G23gat[1]: 00001
+FINISHED with stuck at 1 fault
+c17.bench ELAPSED TIME: 0.21875 seconds
+FINISHED with c17.bench

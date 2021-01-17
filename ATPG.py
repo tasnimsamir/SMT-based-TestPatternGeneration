@@ -70,8 +70,9 @@ class ATPG(object):
             for inNodeName in self.circuit.getInNodeNames():
                 var = self.vars[inNodeName]
                 pattern[inNodeName] = 1 if m[var] == True else 0
-                # print('{0!s:<5s}: {1!s:<5s}'.format(inNodeName, m[var]))
-            print("Input Gates : {}" . format(pattern))
+                print('{0!s:<5s}: {1!s:<5s}'.format(inNodeName, ("1" if is_true(m[var]) else "0")))
+
+            # print("Input Gates : {}" . format(pattern))
             print("Differential Test Pattern: {}" .format(list(pattern.values())))
 
             if printAllSignals:

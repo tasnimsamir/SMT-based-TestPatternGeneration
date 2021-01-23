@@ -50,5 +50,5 @@ G23gat: 00000
 G23gat[0]: 01000
 G23gat[1]: 00001
 FINISHED with stuck at 1 fault
-c17.bench ELAPSED TIME: 0.234375 seconds
+c17.bench ELAPSED TIME: 0.28125 seconds
 FINISHED with c17.bench

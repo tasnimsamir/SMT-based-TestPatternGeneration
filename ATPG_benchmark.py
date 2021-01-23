@@ -21,7 +21,7 @@ def run_test(atpg : ATPG, fault, signalName, inputIndex = None, useOutNode = Non
             logging.info(log_info + "No test case possible")
         atpg.removeFault()
 
-logging.basicConfig(format = '%(message)s', filename='benchmark_failureLOG.log', filemode='w', level=logging.INFO)
+logging.basicConfig(format = '%(message)s', filename='benchmark_ATPG_failureLog.log', filemode='w', level=logging.INFO)
 
 for filename in os.listdir(DIRECTORY):
     logging.info("START with " + filename)

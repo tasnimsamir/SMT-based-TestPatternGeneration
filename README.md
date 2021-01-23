@@ -4,4 +4,4 @@ generating input pattern that differentiate between Normal and faulty Circuit us
 ## Fault Modelling 
 using miter structure (XOR gates) that is connected to the output node.
 
-! [ATPG Model] (https://github.com/tasnimsamir/Differential_Diagnosis/Images/ATPG_model.png)
+![ATPG_Model] (https://github.com/tasnimsamir/Differential_Diagnosis/blob/main/Images/ATPG_model.png)

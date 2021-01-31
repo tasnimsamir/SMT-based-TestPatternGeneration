@@ -25,7 +25,7 @@ generating input vector that differentiate between two different faults in the c
 ![DTPG_Model](/Images/DTPG_model.png)
 
 ## Requirements
-installing z3 solver :  pip install z3-solver
+installing z3 solver
 
 for more details about **z3 solver** you can visit Github Repository: https://github.com/Z3Prover/z3
 **SMT/SAT Solvers** : https://youtu.be/d76e4hV1iJY
